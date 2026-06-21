@@ -199,12 +199,20 @@ footer {
 }
 
 /* IMAGE CYLINDRIQUE + GLOW */
-.hero-image img {
-  width: 280px;
-  max-width: 80%;
-  border-radius: 50px;
+.hero-image {
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+}
 
-  /* GLOW BLEU PRO */
+.hero-image img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 40px;
+
+  /* GLOW PRO */
   box-shadow:
     0 0 0 2px rgba(56,189,248,0.2),
     0 10px 30px rgba(0,0,0,0.5),
@@ -214,7 +222,7 @@ footer {
   transition: all 0.35s ease;
 }
 
-/* HOVER PREMIUM */
+/* HOVER (desktop only effet fort) */
 .hero-image img:hover {
   transform: perspective(800px) rotateX(0deg) scale(1.05);
 
@@ -222,4 +230,16 @@ footer {
     0 0 0 2px rgba(56,189,248,0.35),
     0 15px 40px rgba(0,0,0,0.6),
     0 0 60px rgba(56,189,248,0.6);
+}
+
+/* 📱 MOBILE FIX IMPORTANT */
+@media (max-width: 768px) {
+  .hero-image img {
+    max-width: 240px;
+    transform: none; /* enlève le tilt qui casse le rendu */
+  }
+
+  .hero-image img:hover {
+    transform: scale(1.03);
+  }
 }
