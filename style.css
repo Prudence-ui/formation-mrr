@@ -206,40 +206,42 @@ footer {
   padding: 0 15px;
 }
 
+/* IMAGE STYLE FACEBOOK */
+.hero-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
 .hero-image img {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  border-radius: 40px;
+  width: 170px;
+  height: 170px;
 
-  /* GLOW PRO */
+  object-fit: cover;
+
+  /* rond style profil Facebook */
+  border-radius: 50%;
+
+  /* contour propre */
+  border: 4px solid rgba(255,255,255,0.85);
+
+  /* glow discret */
   box-shadow:
-    0 0 0 2px rgba(56,189,248,0.2),
-    0 10px 30px rgba(0,0,0,0.5),
-    0 0 35px rgba(56,189,248,0.35);
+    0 8px 25px rgba(0,0,0,0.35),
+    0 0 25px rgba(56,189,248,0.18);
 
-  transform: perspective(800px) rotateX(8deg);
-  transition: all 0.35s ease;
+  transition: transform 0.25s ease;
 }
 
-/* HOVER (desktop only effet fort) */
 .hero-image img:hover {
-  transform: perspective(800px) rotateX(0deg) scale(1.05);
-
-  box-shadow:
-    0 0 0 2px rgba(56,189,248,0.35),
-    0 15px 40px rgba(0,0,0,0.6),
-    0 0 60px rgba(56,189,248,0.6);
+  transform: scale(1.03);
 }
 
-/* 📱 MOBILE FIX IMPORTANT */
+/* MOBILE */
 @media (max-width: 768px) {
   .hero-image img {
-    max-width: 240px;
-    transform: none; /* enlève le tilt qui casse le rendu */
-  }
-
-  .hero-image img:hover {
-    transform: scale(1.03);
+    width: 130px;
+    height: 130px;
   }
 }
