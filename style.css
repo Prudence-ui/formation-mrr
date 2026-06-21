@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1e3a8a, #0f172a);
+}
+
+.hero h1 {
+  font-size: 32px;
+}
+
+.hero p {
+  margin: 20px 0;
+  color: #cbd5e1;
+}
+
+.btn {
+  background: #22c55e;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.dark {
+  background: #1e293b;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #334155;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* PRICE */
+.price {
+  text-align: center;
+  padding: 60px 20px;
+  background: #0f172a;
+}
+
+.amount {
+  font-size: 40px;
+  color: #22c55e;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+}
+
+/* FLOAT BUTTON */
+.float-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
