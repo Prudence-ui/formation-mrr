@@ -1,97 +1,187 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0f172a;
   color: white;
+  background: #050b18;
+  overflow-x: hidden;
 }
 
-/* HERO */
+/* =========================
+   PARALLAX SUBTIL
+========================= */
+.parallax {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.layer {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  opacity: 0.25;
+}
+
+.layer1 {
+  background: radial-gradient(circle at 20% 20%, rgba(56,189,248,0.25), transparent 45%);
+}
+
+.layer2 {
+  background: radial-gradient(circle at 80% 40%, rgba(168,85,247,0.18), transparent 50%);
+}
+
+.layer3 {
+  background: radial-gradient(circle at 50% 80%, rgba(14,165,233,0.15), transparent 55%);
+}
+
+/* =========================
+   LAYOUT GLOBAL
+========================= */
+.hero, .section, .price, .counter {
+  max-width: 1000px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+/* =========================
+   HERO
+========================= */
 .hero {
   text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #1e3a8a, #0f172a);
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: bold;
 }
 
 .hero p {
-  margin: 20px 0;
   color: #cbd5e1;
+  max-width: 650px;
+  margin: 15px auto;
 }
 
+/* =========================
+   BUTTON PRO
+========================= */
 .btn {
-  background: #22c55e;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
   color: white;
-  padding: 12px 20px;
+  padding: 14px 24px;
+  border-radius: 12px;
   text-decoration: none;
-  border-radius: 8px;
   display: inline-block;
-  margin-top: 10px;
+  font-weight: bold;
+  transition: 0.25s ease;
 }
 
-/* SECTIONS */
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
 .section {
-  padding: 50px 20px;
   text-align: center;
 }
 
 .dark {
-  background: #1e293b;
+  background: rgba(255,255,255,0.02);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin: 10px 0;
-}
-
-/* GRID */
+/* =========================
+   CARDS MODULES
+========================= */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .card {
-  background: #334155;
-  padding: 15px;
-  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 16px;
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
 }
 
-/* PRICE */
+/* =========================
+   TESTIMONIALS
+========================= */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.testimonial {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 18px;
+  border-radius: 14px;
+  color: #e2e8f0;
+}
+
+/* =========================
+   PRICE
+========================= */
 .price {
   text-align: center;
-  padding: 60px 20px;
-  background: #0f172a;
 }
 
 .amount {
-  font-size: 40px;
-  color: #22c55e;
+  font-size: 54px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* FOOTER */
-footer {
+/* =========================
+   COUNTER
+========================= */
+.counter {
   text-align: center;
-  padding: 20px;
-  background: #020617;
 }
 
-/* FLOAT BUTTON */
+.big-number {
+  font-size: 64px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+/* =========================
+   FLOAT BUTTON
+========================= */
 .float-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 12px 15px;
+  background: #38bdf8;
+  padding: 14px 16px;
   border-radius: 50px;
   text-decoration: none;
+  color: white;
   font-weight: bold;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #94a3b8;
+  background: rgba(0,0,0,0.2);
 }

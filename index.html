@@ -9,11 +9,26 @@
 
 <body>
 
+    <div class="parallax">
+  <div class="layer layer1"></div>
+  <div class="layer layer2"></div>
+  <div class="layer layer3"></div>
+</div>
+
+
   <!-- HERO -->
   <header class="hero">
-    <h1>Crée ton business en ligne avec le Marketing Digital (MRR)</h1>
-    <p>Apprends à vendre des produits digitaux et générer tes premiers revenus en ligne même sans audience.</p>
-    <a href="https://www.tiktok.com" target="_blank" class="btn">💬 Discuter sur TikTok</a>
+    <h1>Formation Marketing Digital MRR</h1>
+    <h3>Droit de revente 100%</h3>
+    <p>Apprends à Crée et à Vendre des produits digitaux et générer tes premiers revenus en ligne même sans audience.</p>
+
+    <!-- PRIX -->
+  <section class="price">
+    <h2>Accès complet</h2>
+    <p class="amount">70€ seulement</p>
+    <a href="https://www.tiktok.com/@rebecca_perez0" target="_blank" class="btn">💬 Acheter / Info</a>
+  </section>
+
   </header>
 
   <!-- AVANTAGES -->
@@ -22,8 +37,8 @@
     <ul>
       <li>✔ Formation simple et actionnable</li>
       <li>✔ Système MRR (tu peux revendre le produit)</li>
-      <li>✔ Stratégies TikTok + WhatsApp</li>
-      <li>✔ Génération de revenus rapide</li>
+      <li>✔ Stratégies TikTok + Instagram</li>
+      <li>✔ Génération de revenus rapide ( Première vente et tu as ton fond d'investissement )</li>
     </ul>
   </section>
 
@@ -51,12 +66,50 @@
     </ul>
   </section>
 
-  <!-- PRIX -->
-  <section class="price">
-    <h2>Accès complet</h2>
-    <p class="amount">70€ seulement</p>
-    <a href="https://www.tiktok.com" target="_blank" class="btn">💬 Acheter / Discuter</a>
-  </section>
+  <section class="section dark">
+  <h2>⭐ Ils ont déjà commencé</h2>
+
+  <div class="testimonials">
+
+    <div class="testimonial">
+      <p>“J’ai fait ma première vente en 5 jours grâce aux scripts TikTok.”</p>
+      <span>- Noelie</span>
+    </div>
+
+    <div class="testimonial">
+      <p>“Enfin une formation simple, j’ai compris comment vendre en ligne.”</p>
+      <span>- Esperencia</span>
+    </div>
+
+    <div class="testimonial">
+      <p>“Le système MRR est puissant, j’ai déjà revendu le produit.”</p>
+      <span>- Michael</span>
+    </div>
+
+  </div>
+</section>
+
+<section class="counter">
+  <h2>📊 Déjà adopté par la communauté</h2>
+  <p class="big-number" id="salesCount">0</p>
+  <p>personnes ont accès à la formation</p>
+</section>
+
+  
+
+  <script>
+let count = 0;
+let target = 368; // tu peux changer le chiffre
+
+let interval = setInterval(() => {
+  count++;
+  document.getElementById("salesCount").innerText = count;
+
+  if (count >= target) {
+    clearInterval(interval);
+  }
+}, 20);
+</script>
 
   <!-- FOOTER -->
   <footer>
@@ -64,7 +117,63 @@
   </footer>
 
   <!-- FLOAT BUTTON -->
-  <a href="https://www.tiktok.com" class="float-btn" target="_blank">💬 Discuter</a>
+  <a href="https://www.tiktok.com/@rebecca_perez0" class="float-btn" target="_blank">💬 Discuter</a>
+
+  <script>
+/* TYPING EFFECT */
+const text = "Crée ton business en ligne avec le marketing digital";
+let i = 0;
+
+function type() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, 60);
+  }
+}
+type();
+
+/* PARALLAX SIMPLE */
+document.addEventListener("mousemove", (e) => {
+  let x = e.clientX / window.innerWidth;
+  let y = e.clientY / window.innerHeight;
+
+  document.querySelector(".layer1").style.transform = `translate(${x * 30}px, ${y * 30}px)`;
+  document.querySelector(".layer2").style.transform = `translate(${x * 60}px, ${y * 60}px)`;
+  document.querySelector(".layer3").style.transform = `translate(${x * 90}px, ${y * 90}px)`;
+});
+
+/* NEIGE SIMPLE */
+function createSnow() {
+  const snow = document.createElement("div");
+  snow.innerHTML = "❄";
+  snow.style.position = "fixed";
+  snow.style.top = "-10px";
+  snow.style.left = Math.random() * 100 + "vw";
+  snow.style.fontSize = Math.random() * 10 + 10 + "px";
+  snow.style.opacity = 0.6;
+  snow.style.color = "#ffffff";
+  snow.style.animation = "fall 6s linear";
+
+  document.body.appendChild(snow);
+
+  setTimeout(() => snow.remove(), 6000);
+}
+
+setInterval(createSnow, 300);
+
+/* SNOW ANIMATION */
+const style = document.createElement("style");
+style.innerHTML = `
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}`;
+document.head.appendChild(style);
+</script>
+
 
 </body>
 </html>
